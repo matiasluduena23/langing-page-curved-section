@@ -1,0 +1,32 @@
+---
+import logoImg from '../../assets/logo.svg';
+---
+
+<header>
+    <div class="container">
+        <div class="flex">
+            <a href="/" class="logo">
+                <img src={logoImg.src} alt="logo image" />
+            </a>
+            <a class="btn" href="#">Try it free</a>
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        padding-block: 2rem;
+    }
+
+    .logo {
+        width: clamp(8rem, 18vw, 14rem);
+    }
+
+    .btn {
+        color: var(--light-pink);
+        font-size: 14px;
+        padding: 0.3rem 1.5rem;
+        border: 1px solid var(--light-pink);
+        border-radius: 30px;
+    }
+</style>

@@ -1,0 +1,38 @@
+---
+import ArticleImageText from './ArticleImageText.astro';
+const {
+    imgTopDesktop,
+    imgTopMobile,
+    imgBottomDesktop,
+    imgBottomMobile,
+    dataArticle,
+} = Astro.props;
+---
+
+<section>
+    <picture>
+        <source media="(min-width: 700px )" srcset={imgTopDesktop.src} />
+        <img class="curved-top" src={imgTopMobile.src} alt="" />
+    </picture>
+
+    <div class="content">
+        <div class="container">
+            <ArticleImageText data={dataArticle} />
+        </div>
+    </div>
+    <picture>
+        <source media="(min-width: 700px )" srcset={imgBottomDesktop.src} />
+        <img class="curved-top" src={imgBottomMobile.src} alt="" />
+    </picture>
+</section>
+
+<style>
+    section {
+        margin-block: 1rem;
+    }
+
+    .content {
+        background-color: var(--very-pale-blue);
+        padding-block: 5rem 3rem;
+    }
+</style>

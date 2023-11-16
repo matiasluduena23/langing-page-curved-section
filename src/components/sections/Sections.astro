@@ -1,0 +1,61 @@
+---
+import ArticleImageText from './ArticleImageText.astro';
+import SectionCurvedBg from './SectionCurvedBg.astro';
+import Button from '../Button.astro';
+import imgTopDesktop1 from '../../assets/bg-section-top-desktop-1.svg';
+import imgTopMobile1 from '../../assets/bg-section-top-mobile-1.svg';
+import imgBottomDesktop1 from '../../assets/bg-section-bottom-desktop-1.svg';
+import imgBottomMobile1 from '../../assets/bg-section-bottom-mobile-1.svg';
+import imgTopDesktop2 from '../../assets/bg-section-top-desktop-2.svg';
+import imgTopMobile2 from '../../assets/bg-section-top-mobile-2.svg';
+import imgBottomDesktop2 from '../../assets/bg-section-bottom-desktop-2.svg';
+import imgBottomMobile2 from '../../assets/bg-section-bottom-mobile-2.svg';
+
+import { getCollection } from 'astro:content';
+const allPosts = await getCollection('posts');
+---
+
+<div class="content">
+    <SectionCurvedBg
+        imgTopDesktop={imgTopDesktop1}
+        imgTopMobile={imgTopMobile1}
+        imgBottomDesktop={imgBottomDesktop1}
+        imgBottomMobile={imgBottomMobile1}
+        dataArticle={allPosts[0].data}
+    />
+
+    <section class="main-section-2">
+        <div class="container">
+            <ArticleImageText data={allPosts[1].data} />
+        </div>
+    </section>
+
+    <SectionCurvedBg
+        imgTopDesktop={imgTopDesktop2}
+        imgTopMobile={imgTopMobile2}
+        imgBottomDesktop={imgBottomDesktop2}
+        imgBottomMobile={imgBottomMobile2}
+        dataArticle={allPosts[2].data}
+    />
+    <section class="main-section-3">
+        <div class="container">
+            <h2>Ready To Build Your Community?</h2>
+            <Button />
+        </div>
+    </section>
+</div>
+
+<style>
+    .main-section-2 {
+        margin-block: 7rem;
+    }
+
+    .main-section-3 {
+        margin-block: 3rem 7rem;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 3rem;
+    }
+</style>

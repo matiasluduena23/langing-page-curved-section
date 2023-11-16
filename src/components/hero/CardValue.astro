@@ -1,0 +1,32 @@
+---
+const { imgSrc, imgAlt, text, description } = Astro.props;
+---
+
+<article>
+    <img src={imgSrc.src} alt={imgAlt} />
+    <p class="text">{text}</p>
+    <p class="description">{description}</p>
+</article>
+
+<style>
+    article {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    img {
+        width: 30px;
+    }
+
+    .text {
+        font-size: 3.8rem;
+        font-weight: 700;
+        color: var(--very-dark-cyan);
+        line-height: 1.3;
+    }
+
+    .description {
+        color: var(--very-dark-cyan);
+        opacity: 0.5;
+    }
+</style>

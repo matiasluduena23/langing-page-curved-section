@@ -1,0 +1,33 @@
+---
+import imgTopDesktop from '../../assets/bg-footer-top-desktop.svg';
+import imgTopMobile from '../../assets/bg-footer-top-mobile.svg';
+import Contant from './Contant.astro';
+import Newsletter from './Newsletter.astro';
+---
+
+<footer>
+    <picture>
+        <source media="(min-width: 700px )" srcset={imgTopDesktop.src} />
+        <img class="curved-top" src={imgTopMobile.src} alt="" />
+    </picture>
+
+    <div class="content">
+        <div class="container">
+            <div class="wrap-footer">
+                <div class="col-2">
+                    <Newsletter />
+                </div>
+                <div class="col-1">
+                    <Contant />
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .content {
+        background-color: var(--very-dark-cyan);
+        color: var(--very-pale-blue);
+    }
+</style>

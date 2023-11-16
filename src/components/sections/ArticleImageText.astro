@@ -1,0 +1,35 @@
+---
+const { data } = Astro.props;
+const { imgSrc, imgAlt, title, text } = data;
+---
+
+<article>
+    <img class="grow-image" src={imgSrc} alt={imgAlt} />
+    <div class="wrap-text">
+        <h2>{title}</h2>
+        <p>
+            {text}
+        </p>
+    </div>
+</article>
+
+<style>
+    .grow-image {
+        height: 100%;
+        padding-inline: 2rem;
+    }
+
+    .wrap-text {
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.3rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+</style>

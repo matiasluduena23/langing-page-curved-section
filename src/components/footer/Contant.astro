@@ -1,0 +1,63 @@
+---
+import iconPhone from '../../assets/icon-phone.svg';
+import iconEmail from '../../assets/icon-email.svg';
+import logoFooter from '../../assets/logo-footer.svg';
+import SocialIcon from '../footer/SocialIcon.astro';
+---
+
+<section>
+    <header>
+        <div class="logo">
+            <img src={logoFooter.src} alt="" />
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.
+        </p>
+    </header>
+    <address>
+        <div class="wrap-address">
+            <img src={iconPhone.src} alt="icon phone" />
+            <a href="#">Phone: +1-543-123-4567</a>
+        </div>
+        <div class="wrap-address">
+            <img src={iconEmail.src} alt="icon email" />
+            <a href="#">example@huddle.com</a>
+        </div>
+    </address>
+    <footer>
+        <SocialIcon />
+    </footer>
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        margin-top: 5rem;
+    }
+
+    .logo {
+        width: 180px;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .wrap-address {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        a {
+            color: var(--very-pale-blue);
+        }
+    }
+
+    .wrap-address:first-child {
+        margin-bottom: 1rem;
+    }
+</style>
