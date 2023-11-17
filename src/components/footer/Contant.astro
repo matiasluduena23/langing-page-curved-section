@@ -36,6 +36,7 @@ import SocialIcon from '../footer/SocialIcon.astro';
         flex-direction: column;
         gap: 2.5rem;
         margin-top: 5rem;
+        max-width: 320px;
     }
 
     .logo {
@@ -51,13 +52,24 @@ import SocialIcon from '../footer/SocialIcon.astro';
         display: flex;
         align-items: center;
         gap: 1rem;
+        font-style: normal;
 
         a {
             color: var(--very-pale-blue);
+        }
+
+        a:hover {
+            color: white;
         }
     }
 
     .wrap-address:first-child {
         margin-bottom: 1rem;
+    }
+
+    @media (min-width: 800px) {
+        section {
+            margin: 0;
+        }
     }
 </style>

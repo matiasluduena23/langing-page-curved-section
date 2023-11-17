@@ -23,10 +23,24 @@ import logoImg from '../../assets/logo.svg';
     }
 
     .btn {
-        color: var(--light-pink);
+        color: var(--pink);
         font-size: 14px;
         padding: 0.3rem 1.5rem;
-        border: 1px solid var(--light-pink);
+        border: 1px solid var(--pink);
         border-radius: 30px;
+        transition:
+            color 200ms ease-in-out,
+            border 200ms ease-in-out;
+    }
+
+    .btn:hover {
+        color: var(--light-pink);
+        border: 1px solid var(--light-pink);
+    }
+
+    @media (min-width: 800px) {
+        header {
+            padding-block: 4rem;
+        }
     }
 </style>

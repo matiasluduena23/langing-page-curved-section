@@ -14,8 +14,17 @@
         font-weight: 700;
         box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
         cursor: pointer;
+        transition: background-color 200ms ease-in-out;
     }
 
     button:hover {
+        background-color: var(--light-pink);
+    }
+
+    @media (min-width: 800px) {
+        button {
+            padding: 1.3rem 6rem;
+            font-size: 16px;
+        }
     }
 </style>

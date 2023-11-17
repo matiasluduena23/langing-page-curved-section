@@ -30,4 +30,29 @@ import Newsletter from './Newsletter.astro';
         background-color: var(--very-dark-cyan);
         color: var(--very-pale-blue);
     }
+
+    img {
+        width: 100%;
+    }
+
+    @media (min-width: 800px) {
+        .content {
+            padding-block: 5rem;
+        }
+        .wrap-footer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: start;
+        }
+
+        .col-1 {
+            grid-column: 1 /2;
+            grid-row: 1;
+        }
+
+        .col-2 {
+            grid-column: 2 /3;
+            grid-row: 1;
+        }
+    }
 </style>

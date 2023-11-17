@@ -25,11 +25,32 @@ const { imgSrc, imgAlt, title, text } = data;
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: clamp(1.3rem, 3vw, 2.2rem);
         margin-bottom: 1.3rem;
     }
 
     p {
-        font-size: 14px;
+        font-size: clamp(14px, 1.8vw, 16px);
+    }
+
+    @media (min-width: 800px) {
+        article {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+
+        .wrap-text {
+            margin-top: 0;
+            text-align: start;
+            grid-column: 1/ 2;
+            grid-row: 1;
+            max-width: 470px;
+        }
+
+        img {
+            grid-column: 2 /3;
+            grid-row: 1;
+        }
     }
 </style>

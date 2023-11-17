@@ -39,13 +39,13 @@ const allPosts = await getCollection('posts');
     />
     <section class="main-section-3">
         <div class="container">
-            <h2>Ready To Build Your Community?</h2>
+            <h2 class="main-section-3-title">Ready To Build Your Community?</h2>
             <Button />
         </div>
     </section>
 </div>
 
-<style>
+<style is:global>
     .main-section-2 {
         margin-block: 7rem;
     }
@@ -55,7 +55,26 @@ const allPosts = await getCollection('posts');
         text-align: center;
     }
 
-    h2 {
+    .main-section-3-title {
+        font-size: clamp(1.3rem, 3vw, 2.2rem);
         margin-bottom: 3rem;
+    }
+
+    /* global: switch the side of the article 2 */
+    .main-section-2 article .wrap-text {
+        grid-column: 2/ 3;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .main-section-2 article img {
+        grid-column: 1 /2;
+        grid-row: 1;
+    }
+
+    @media (min-width: 800px) {
+        .main-section-3 {
+            margin-block: 10rem;
+        }
     }
 </style>

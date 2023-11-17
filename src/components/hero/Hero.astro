@@ -20,7 +20,7 @@ import CardValue from './CardValue.astro';
     <div class="wrap-image">
         <Image src={imageHero} alt="images of two devices" />
     </div>
-    <aside>
+    <aside class="grid-auto">
         <CardValue
             imgSrc={iconComunities}
             imgAlt="icon communities"
@@ -54,10 +54,14 @@ import CardValue from './CardValue.astro';
         font-size: clamp(15px, 3vw, 18px);
         color: var(--very-dark-cyan);
         margin-bottom: 1.5rem;
+        max-width: 550px;
     }
 
     img {
         height: 100%;
+        width: 100%;
+        max-width: 900px;
+        margin-inline: auto;
     }
 
     aside {
@@ -66,5 +70,11 @@ import CardValue from './CardValue.astro';
         justify-content: center;
 
         gap: 7rem;
+    }
+
+    @media (min-width: 800px) {
+        section {
+            margin-block: 10rem 6rem;
+        }
     }
 </style>
